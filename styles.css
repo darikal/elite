@@ -1,13 +1,13 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
 /* BACKGROUND */
 body {
-  background-color: #1f3d2b; /* forest green */
+  background-color: #1f3d2b;
   color: #333;
 }
 
@@ -19,21 +19,21 @@ body {
   background: rgba(31, 61, 43, 0.95);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 40px;
   z-index: 1000;
 }
 
-.navbar .logo {
+.logo {
   color: #fff;
-  font-weight: bold;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .navbar nav a {
   color: #fff;
   margin-left: 25px;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .navbar nav a:hover {
@@ -43,19 +43,19 @@ body {
 /* HERO */
 .hero {
   height: 90vh;
+  margin-top: 60px;
   background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  margin-top: 60px;
+  align-items: center;
 }
 
 .hero-text {
   background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
   color: #fff;
+  padding: 40px;
   border-radius: 8px;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -63,26 +63,35 @@ body {
   margin-bottom: 10px;
 }
 
-/* CONTENT SECTIONS */
+/* CONTENT PANELS */
 .content {
+  width: 75vw;
   background: #fff;
-  width: 75%;
-  padding: 50px;
-  margin: 80px 0;
-  border-radius: 8px;
+  margin: 100px 0;
+  padding: 60px;
 }
 
 .content.left {
-  margin-left: 5%;
+  margin-left: 0;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
 
 .content.right {
-  margin-left: 20%;
+  margin-left: auto;
+  margin-right: 0;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
 }
 
+.inner {
+  max-width: 900px;
+}
+
+/* TEXT */
 .content h2 {
-  margin-bottom: 20px;
   color: #1f3d2b;
+  margin-bottom: 20px;
 }
 
 .content p {
@@ -105,8 +114,8 @@ form button {
   color: #fff;
   border: none;
   padding: 12px 25px;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 form button:hover {
@@ -123,11 +132,14 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .content,
-  .content.left,
-  .content.right {
-    width: 90%;
-    margin-left: 5%;
+  .content {
+    width: 100vw;
+    padding: 40px 25px;
+    border-radius: 0;
+  }
+
+  .inner {
+    max-width: 100%;
   }
 
   .hero-text h1 {
